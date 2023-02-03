@@ -22,8 +22,11 @@ Advanced ways to use `foundryup`, and other documentation, can be found in the [
 npm i
 ```
 
-nodemon src/server.js
+3.  **Run Tests**
 
-testing
-
+```bash
 forge test --match-contract MultiSendTest -vvvv
+```
+
+4.  **Run Server**
+    nodemon src/server.js

@@ -1,5 +1,5 @@
 {
-  "name": "solid-openfort",
+  "name": "solid-batch",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/solidoracle/solid-openfort.git"
+    "url": "git+https://github.com/solidoracle/solid-batch.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/solidoracle/solid-openfort/issues"
+    "url": "https://github.com/solidoracle/solid-batch/issues"
   },
-  "homepage": "https://github.com/solidoracle/solid-openfort#readme",
+  "homepage": "https://github.com/solidoracle/solid-batch#readme",
   "dependencies": {
     "@indexed-finance/multicall": "^2.0.0",
     "@openzeppelin/contracts": "^4.8.1",

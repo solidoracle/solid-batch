@@ -8,7 +8,6 @@ import "./utils/vm.sol";
 
 
 contract MultiSendTest is DSTest {
-    // Cheat codes are state changing methods
     Vm vm = Vm(address(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D));
     address owner = address(100);
     address player1 = address(200);

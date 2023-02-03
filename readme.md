@@ -29,7 +29,8 @@ forge test --match-contract MultiSendTest -vvvv
 ```
 
 4.  **Run Server**
-    I simulate a POST endpoint with the parameters specified in src/mockdata
+
+I simulate a POST endpoint with the parameters specified in src/mockdata
 
 ```bash
 nodemon src/server.js

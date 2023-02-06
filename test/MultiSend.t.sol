@@ -52,8 +52,10 @@ contract MultiSendTest is DSTest {
 
         multisend.multiERC20TransferPacked(data);
 
-        console.log(eRC20mock1.balanceOf(owner));   
-        console.log(eRC20mock2.balanceOf(owner));   
+
+        assertEq(eRC20mock1.balanceOf(owner), 8 ether);
+        assertEq(eRC20mock2.balanceOf(owner), 7 ether);
+
 
 
         vm.stopPrank();

@@ -11,7 +11,7 @@ const abiERC20 = [
 ];
 
 const abiMultiSend = [
-  "function multiERC20Transfer(address[] memory _tokens, address[] memory _addresses, uint[] memory _amounts) returns (bool)",
+  "function multiERC20TransferPacked(bytes[] memory _data) public",
 ];
 
 module.exports = {

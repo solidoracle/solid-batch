@@ -2,9 +2,11 @@ pragma solidity ^0.8.10;
 
 import "ds-test/test.sol";
 import "../contracts/Multisend.sol";
-import "../contracts/ERC20mock1.sol";
-import "../contracts/ERC20mock2.sol";
+import "../contracts/mocks/ERC20mock1.sol";
+import "../contracts/mocks/ERC20mock2.sol";
 import "./utils/vm.sol";
+import "forge-std/console.sol";
+
 
 
 contract MultiSendTest is DSTest {
@@ -56,6 +58,24 @@ contract MultiSendTest is DSTest {
         assertEq(eRC20mock2.balanceOf(owner), 8 ether);
         assertEq(eRC20mock2.balanceOf(player1), 1 ether);
         assertEq(eRC20mock2.balanceOf(player2), 1 ether);
+
+        
+
+        address creator1 = address(player1);
+        uint256 amountPack1 = 1 ether;
+        
+        bytes[] memory data;
+
+        data[0] = abi.encode(address(eRC20mock1), address(player1), 2 ether);
+        
+        data[1] = abi.encode(address(eRC20mock2), address(player2), 3 ether);
+
+
+        multisend.multiERC20TransferPacked(data);
+
+        console.log(eRC20mock1.balanceOf(owner));   
+        console.log(eRC20mock2.balanceOf(owner));   
+
 
         vm.stopPrank();
     }

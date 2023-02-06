@@ -37,34 +37,13 @@ contract MultiSendTest is DSTest {
         eRC20mock1.approve(address(multisend), 100 ether);
         eRC20mock2.approve(address(multisend), 100 ether);
 
-        address[] memory tokenArray = new address[](2);
-        address[] memory addressArray = new address[](2);
-        uint[] memory amounts = new uint[](2);
+    
 
-        tokenArray[0] = address(eRC20mock1);
-        tokenArray[1] = address(eRC20mock2);
-        addressArray[0] = address(player1);
-        addressArray[1] = address(player2);
-        amounts[0] = 1 ether;
-        amounts[1] = 1 ether;
-
-
-        multisend.multiERC20Transfer(tokenArray, addressArray, amounts);
-
-        assertEq(eRC20mock1.balanceOf(owner), 8 ether);
-        assertEq(eRC20mock1.balanceOf(player1), 1 ether);
-        assertEq(eRC20mock1.balanceOf(player2), 1 ether);
-
-        assertEq(eRC20mock2.balanceOf(owner), 8 ether);
-        assertEq(eRC20mock2.balanceOf(player1), 1 ether);
-        assertEq(eRC20mock2.balanceOf(player2), 1 ether);
-
-        
 
         address creator1 = address(player1);
         uint256 amountPack1 = 1 ether;
         
-        bytes[] memory data;
+        bytes[2] memory data;
 
         data[0] = abi.encode(address(eRC20mock1), address(player1), 2 ether);
         

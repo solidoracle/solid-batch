@@ -30,7 +30,7 @@ forge test --match-contract MultiSendTest -vvvv
 
 4.  **Run Server**
 
-I simulated a POST endpoint in Postman (x-www-form-urlencoded) with parameters specified in src/mockdata
+I simulated a POST endpoint in Postman (x-www-form-urlencoded) with parameters specified in src/mockdata, and using an ERC20 specified in .env
 
 ```bash
 nodemon src/server.js

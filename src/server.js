@@ -20,7 +20,7 @@ const privatekey = process.env.PRIVATE_KEY;
 const wallet = new ethers.Wallet(privatekey, provider);
 
 const multiSendAddress = process.env.MULTISEND_CONTRACT_ADDRESS;
-const solids = process.env.SOLIDS_CONTRACT_ADDRESS;
+const solids = process.env.ERC20_CONTRACT_ADDRESS;
 
 app.post("/api/transaction", async (req, res) => {
   const { api_key, address, token, amount } = req.body;

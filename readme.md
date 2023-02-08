@@ -1,5 +1,9 @@
 # Solid-Batch ⚒️
 
+A NodeJS server that batches ERC-20 transactions📦
+
+It allows you to transfer multiple ERC20 tokens in bulk to different wallets seamlessly.
+
 1.  **Install Foundry**
 
 First run the command below to get foundryup, the Foundry toolchain installer:
